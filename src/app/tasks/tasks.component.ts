@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Task } from '../lib/task';
+
 import { TaskService } from '../services/task.service';
 
 
@@ -9,10 +10,11 @@ import { TaskService } from '../services/task.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-
+  @Input() title: string;
   tasks: Task[];
 
   constructor(private taskService: TaskService) {
+
   }
 
   getTasks(): void {

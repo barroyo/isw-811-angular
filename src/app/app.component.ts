@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Todo App';
-  footerMsg = 'Copyright 2018';
+  title = 'Todo App Name';
+  taskTitle = "Taskbox";
+  footerMsg = 'Ths is the app component';
 }

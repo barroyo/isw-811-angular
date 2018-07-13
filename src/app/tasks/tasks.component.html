@@ -1,6 +1,7 @@
+<h2>{{title}}</h2>
+<button (click)="getTasks()">Refresh</button>
 <ul>
-  <li *ngFor="let v of tasks">
-    ({{v._id}}) {{v.title}} <p>{{v.detail}}</p>
-
+  <li *ngFor="let task of tasks">
+    ({{task._id}}) {{task.title}} <p>{{task.detail}}</p>
   </li>
 </ul>

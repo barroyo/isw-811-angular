@@ -9,6 +9,7 @@
   <router-outlet></router-outlet>
 </div>
 <aside>
-  <app-tasks></app-tasks>
+  <app-tasks [title]="taskTitle"></app-tasks>
 </aside>
-<footer>{{footerMsg}}</footer>
+
+<footer>{{ footerMsg }}</footer>

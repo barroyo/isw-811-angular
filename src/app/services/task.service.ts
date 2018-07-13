@@ -15,24 +15,28 @@ export class TaskService {
   constructor(private http: HttpClient) {
   }
 
-  // getTasks(): Observable<Task[]> {
-  //   return of([
+  // getTasks(): Task[] {
+  //   return [
   //     {
-  //       name: 'Tarea desde Servicio 1',
-  //       id: '1'
+  //       title: 'Tarea desde Servicio 1',
+  //       _id: '1'
   //     },
   //     {
-  //       name: 'Tarea 2',
-  //       id: '2'
+  //       title: 'Tarea desde Servicio 2',
+  //       _id: '2'
   //     },
   //     {
-  //       name: 'Tarea 3',
-  //       id: '3'
+  //       title: 'Tarea 3',
+  //       _id: '3'
   //     },
-  //   ]);
+  //   ];
   // }
 
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(this.tasksUrl);
+  }
+
+  createTasks(task: Task): Observable<Object> {
+    return this.http.post(this.tasksUrl, task );
   }
 }
